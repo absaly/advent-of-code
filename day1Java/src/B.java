@@ -27,17 +27,8 @@ public class B {
                 //System.out.println(linkedList.getFirst() + ", " + linkedList.getLast());
                 String first = linkedList.getFirst();
                 String last = linkedList.getLast();
-                if (map.containsKey(first)) {
-                    num1 = Integer.parseInt(map.get(first));
-                } else {
-                    num1 = Integer.parseInt(first);
-                }
-
-                if (map.containsKey(last)) {
-                    num2 = Integer.parseInt(map.get(last));
-                } else {
-                    num2 = Integer.parseInt(last);
-                }
+                num1 = Integer.parseInt(map.getOrDefault(first, first));
+                num2 = Integer.parseInt(map.getOrDefault(last, last));
                 int cval = num1 * 10 + num2;
                 System.out.println(num1 + ", " + num2 + " CVal: " + cval);
                 sum += cval;
