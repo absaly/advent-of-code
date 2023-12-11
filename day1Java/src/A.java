@@ -2,10 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Day1Part1 {
+public class A {
     public static void main(String[] args) {
         int sum = 0;
-        String filePath = "day1/Resources/CalibrationValues.txt";
+        String filePath = "day1Java/Resources/CalibrationValues.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
